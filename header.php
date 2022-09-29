@@ -36,6 +36,8 @@
                     <li><a href=""  class="menu__link">Page 3</a></li>
                     <li>
 					   <a href="" class="menu__link">Pages 1+</a>
+					   <span class="menu__arrow"></span>
+					   <span class="menu__arrowfalse"></span>
 					   <ul class="menu__sub-list">
 						<li>
 						    <a href="" class="menu__sub-link">Page 1</a>
@@ -51,6 +53,8 @@
 					<li><a href=""  class="menu__link">Page 4</a></li>
 					<li>
 						<a href="" class="menu__link">Pages 2+</a>
+						<span class="menu__arrow"></span>
+						<span class="menu__arrowfalse"></span>
 						<ul class="menu__sub-list">
 						 <li>
 							 <a href="" class="menu__sub-link">Page 1</a>
