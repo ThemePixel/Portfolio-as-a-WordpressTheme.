@@ -1,6 +1,5 @@
 @import "reset.css";
 
-
 html{
     box-sizing: border-box;
 }
@@ -11,7 +10,6 @@ html{
 a{
     text-decoration: none;
 }
-
 
 .header{
     position: fixed;
@@ -37,74 +35,56 @@ a{
             z-index: 8;
             background-color: white;
         }
-        
-            .menu__body{
-                .menu__list{
-                    li{
-                        position: relative;
-                        margin: 0px 0px 0px 60px;
-                        display: flex;
+        .menu__body{
+            .menu__list{
+                li{
+                    position: relative;
+                    margin: 0px 0px 0px 60px;
+                    display: flex;
+                    align-items: center;
+                    &:hover{
+                        text-decoration: underline;
+                        text-underline-offset: 5px;
+                    }
+                    .menu__link{
+                        color: white; 
+                        font-size: 18px;
+                    }
+                    .menu__sub-list{
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        background-color: black;
+                        padding: 15px;
+                        min-width: 145px;
                         align-items: center;
-                        &:hover{
-                            text-decoration: underline;
+                        display: flex;
+                        flex-direction: column;
+                        li{
+                            margin: 0px 0px 24px 0px;
+                            .menu__sub-link{
+                                color: aqua;
+                                padding-bottom: 10px;
+                                }
                         }
-                        .menu__link{
-                            color: white; 
-                            font-size: 18px;
-                        }
-                        .menu__sub-list{
-                            position: absolute;
-                            top: 100%;
-                            right: 0;
-                            background-color: black;
-                            padding: 15px;
-                            min-width: 145px;
-                            align-items: center;
-                            display: flex;
-                            flex-direction: column;
-                            margin-top: 44px;
-                            
-
-
-                            li{
-                                margin: 0px 0px 24px 0px;
-                                .menu__sub-link{
-                                    color: aqua;
-                                    padding-bottom: 10px;
-                                   }
-                                
-                            }
-                            li:last-child{
-
-                                margin: 0px 0px 0px 0px;
-                            }
+                        li:last-child{
+                            margin: 0px 0px 0px 0px;
                         }
                     }
                 }
             }
         }
     }
-/////////////////////////////////
-
-
+}
 body._pc .menu__list > li:hover .menu__sub-list{
     opacity: 1;
     visibility: visible;
     transform: translate(0px, 0px);
     pointer-events: all;
-
 }
-
 body._mobile .menu__list > li._active .menu__arrow{
     transform: rotate(-180deg);
-
 }
-
-
-
-
-
-/////////////////////////////////////////////
 .menu__arrowfalse{
     display: block;
     width: 0;
@@ -118,17 +98,6 @@ body._mobile .menu__list > li._active .menu__arrow{
 .menu__arrow{
     display: none;
    }
-////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-///////////////////////////////////////////////
 body._mobile .menu__arrow{
     display: block;
     width: 0;
@@ -139,62 +108,53 @@ body._mobile .menu__arrow{
     border-top: 10px solid white;
     transition: transform 0.3s ease 0s;
 }
-
-
-
-
-
 body._mobile .menu__arrowfalse{
     display: none;
-    
-    
-   }
- body._mobile .menu__link{
-    flex: 1 1 auto;
 }
-////////////////////////////////////////////////
-
 body._mobile .menu__list > li{
     display: flex;
     align-items: center;
 }
-/////////////////////////////////////////////////////////
 body._mobile .menu__list > li._active .menu__sub-list{
     opacity: 1;
     visibility: visible;
     transform: translate(0px, 0px);
     pointer-events: all;
-
 }
 
 
-////////////////////////////////
-@media only screen and (min-width: 700px) {
-
+@media only screen and (min-width: 900px) {
     .menu__list{
         display: flex;
         align-items: center;
         .menu__link{
-            padding: 20px 0px;
+            padding: 26px 0px;
         }
         .menu__sub-list{
             
-            transform: translate(0px, 10%);
+            transform: translate(-159px, 45%);
             opacity: 0;
             visibility: hidden;
-            transition: all 0.3s ease 0s;
+            transition: all 0.4s ease 0s;
             pointer-events: none;
-
         }
     }
 }
 
 
-////////////////////////////////
-@media only screen and (max-width: 980px){
 
+@media only screen and (max-width: 1000px){
 
-    //////////////////////////////////////////
+body .header .header__container .menu__body .menu__list li .menu__sub-list{
+    position: relative;
+    flex: 1 1 100%;
+    align-items: flex-start;
+    display: none;
+}
+
+body .header .header__container .menu__body .menu__list > li._active .menu__sub-list{   
+    display: block;
+}
     .menu__icon{
         z-index: 5;
         display: block;
@@ -227,9 +187,8 @@ body._mobile .menu__list > li._active .menu__sub-list{
         top: 50%;
         transform: scale(1) translate(0px, -50%);
     }
-///////////////////////////////////////////////////
-        
-.menu__body{
+
+    .menu__body{
     position: fixed;
     top: 0;
     left: 0;
@@ -238,16 +197,17 @@ body._mobile .menu__list > li._active .menu__sub-list{
     background-color:  rgba(0, 0, 0, 0.94);
     padding: 100px 30px 30px 30px;
     transition: left 0.3s ease 0s;
-    overflow: scroll; //&&&&&&&&&&
+    overflow: scroll; 
     left: -100%;
     .menu__list{
         flex-direction: column;
-
+        align-items: flex-start;
+        li{
+            flex-wrap: wrap;
+        }
     }
 }
-
-
-    }
+}
 
 
 
