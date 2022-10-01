@@ -24,18 +24,32 @@
 
 <header class="header">
 	<div class="header__container">
-		<a href="" class="header__logo"></a>
+		<a href="<?php echo esc_url(home_url("/")); ?>" class="header__logo"><?php bloginfo( 'name' ); ?></a>
 		<div class="header__menu menu">
 			<div class="menu__icon">
 				<span></span>
             </div>  
 			<nav class="menu__body">
+
+
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'header-menu',
+					'menu_id'        => 'primary-menu',
+				    'menu_class'     => 'menu__list',
+					'container'      => ''
+				)
+			);
+			?>
+
+
                 <ul class="menu__list">
-                    <li><a href=""  class="menu__link">Page 1</a></li>
-                    <li><a href=""  class="menu__link">Page 2</a></li>
-                    <li><a href=""  class="menu__link">Page 3</a></li>
+                    <li><a href="#page1"  class="menu__link">Page 1</a></li>
+                    <li><a href="#page2"  class="menu__link">Page 2</a></li>
+                    <li><a href="#page3"  class="menu__link">Page 3</a></li>
                     <li>
-					   <a href="" class="menu__link">Pages 1+</a>
+					   <a href="#page4" class="menu__link">Pages 1+</a>
 					   <span class="menu__arrow"></span>
 					   <span class="menu__arrowfalse"></span>
 					   <ul class="menu__sub-list">
@@ -50,9 +64,9 @@
 						 </li>
 					   </ul>
 					</li>
-					<li><a href=""  class="menu__link">Page 4</a></li>
+					<li><a href="#page5"  class="menu__link">Page 4</a></li>
 					<li>
-						<a href="" class="menu__link">Pages 2+</a>
+						<a href="#page6" class="menu__link">Pages 2+</a>
 						<span class="menu__arrow"></span>
 						<span class="menu__arrowfalse"></span>
 						<ul class="menu__sub-list">
@@ -67,7 +81,7 @@
 						  </li>
 						</ul>
 					</li>
-					<li><a href=""  class="menu__link">Page 5</a></li>
+					<li><a href="#page7"  class="menu__link">Page 5</a></li>
 				</ul>
             </nav>        
 		</div>

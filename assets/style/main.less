@@ -18,7 +18,6 @@ a{
     width: 100%;
     z-index: 10;
     background-color: red;
-    margin-top: 110px;
     .header__container{
         max-width: 1200px;
         margin: 0px auto;
@@ -29,11 +28,9 @@ a{
         min-height: 70px;
         .header__logo{
             position: relative;
-            border-radius: 50%;
-            height: 40px;
-            width: 40px;
             z-index: 8;
-            background-color: white;
+            font-size: 48px;
+            color: aliceblue;
         }
         .menu__body{
             .menu__list{
@@ -219,14 +216,12 @@ body .header .header__container .menu__body .menu__list > li._active .menu__sub-
         content: "";
         position: fixed;
         width: 100%;
-       // top: 0;
+        top: 0;
         left: 0;
         height: 70px;
         background: linear-gradient(#fa5a29,#ff742b);
         z-index: 2;
-        margin: 10px 0px 0px 0px;
-    }
-
+        }
     .menu__list{
         flex-direction: column;
         align-items: flex-start;
