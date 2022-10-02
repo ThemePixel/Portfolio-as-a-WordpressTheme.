@@ -10,6 +10,13 @@ html {
 a {
   text-decoration: none;
 }
+.wrapper {
+  width: 370px;
+  margin: 0 auto;
+}
+.wrapper .hoome4 {
+  margin-top: 260px;
+}
 .header {
   position: fixed;
   top: 0;

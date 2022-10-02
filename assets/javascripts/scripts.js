@@ -59,7 +59,7 @@
 
 
 
-    const menuLinks = document.querySelectorAll('.menulink_li-a[data-goto], .menulink_sub_li-a[data-goto]');
+    const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
     if (menuLinks.length > 0) {
         menuLinks.forEach(menuLink => {
             menuLink.addEventListener("click", onMenuLinkClick);
@@ -71,9 +71,9 @@
                 const gotoBlock = document.querySelector(menuLink.dataset.goto);
                 const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
     
-                if (iconMenux.classList.contains('_active')) {
+                if (iconMenu.classList.contains('_active')) {
                     document.body.classList.remove('_lock');
-                    iconMenux.classList.remove('_active');
+                    iconMenu.classList.remove('_active');
                     navMenu.classList.remove('_active');
     
                 }
