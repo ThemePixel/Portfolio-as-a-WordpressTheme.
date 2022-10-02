@@ -32,16 +32,7 @@
 			<nav class="menu__body">
 
 
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'header-menu',
-					'menu_id'        => 'primary-menu',
-				    'menu_class'     => 'menu__list',
-					'container'      => ''
-				)
-			);
-			?>
+			
 
 
                 <ul class="menu__list">

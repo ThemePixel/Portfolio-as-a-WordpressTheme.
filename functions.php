@@ -168,9 +168,9 @@ add_action( 'wp_enqueue_scripts', 'portfoliowidgets_scripts' );
  */
 //require get_template_directory() . '/inc/custom-header.php';
 
-
-function portfoliowidgets_add_link_atts($atts) {
-	$atts['class'] = "menu__link";
-	return $atts;
-  }
-  add_filter( 'nav_menu_link_attributes', 'portfoliowidgets_add_link_atts');
+//////////////////HOOK TO ADD CLASS TO LINK TAG A/////////////////////////////////////////////////
+//function portfoliowidgets_add_link_atts($atts) {
+//	$atts['class'] = "menu__link";
+//	return $atts;
+  //}
+ // add_filter( 'nav_menu_link_attributes', 'portfoliowidgets_add_link_atts');
