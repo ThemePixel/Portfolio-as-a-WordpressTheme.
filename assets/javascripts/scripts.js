@@ -74,7 +74,7 @@
                 if (iconMenu.classList.contains('_active')) {
                     document.body.classList.remove('_lock');
                     iconMenu.classList.remove('_active');
-                    navMenu.classList.remove('_active');
+                    menuBody.classList.remove('_active');
     
                 }
     
